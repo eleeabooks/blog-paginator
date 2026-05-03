@@ -31,7 +31,7 @@ function pagination(totalPosts) {
     let leftnum = Math.floor(pagesToShow / 2);
     let maximum = Math.ceil(totalPosts / itemsPerPage);
 
-    paginationHTML += `<span class='totalpages'>Hoja ${currentPage} de ${maximum}</span>`;
+    paginationHTML += `<span class='totalpages'>Pág. ${currentPage} de ${maximum}</span>`;
 
     if (currentPage > 1) {
         paginationHTML += createPageLink(currentPage - 1, prevpage);
