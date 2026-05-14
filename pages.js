@@ -31,6 +31,19 @@ function pagination(totalPosts) {
     let leftnum = Math.floor(pagesToShow / 2);
     let maximum = Math.ceil(totalPosts / itemsPerPage);
 
+    // 🔥 NUEVO: si solo hay una página, ocultar paginador
+    if (maximum <= 1) {
+        let pageArea = document.getElementsByName("pageArea");
+        let pagerElement = document.getElementById("blog-pager");
+
+        for (let i = 0; i < pageArea.length; i++) {
+            pageArea[i].innerHTML = "";
+        }
+        if (pagerElement) pagerElement.innerHTML = "";
+
+        return; // salir sin generar nada
+    }  
+  
     paginationHTML += `<span class='totalpages'>Pág. ${currentPage} de ${maximum}</span>`;
 
     if (currentPage > 1) {
