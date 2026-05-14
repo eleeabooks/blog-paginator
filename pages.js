@@ -42,8 +42,8 @@ function pagination(totalPosts) {
         if (pagerElement) pagerElement.innerHTML = "";
 
         return; // salir sin generar nada
-    }  
-  
+    }
+
     paginationHTML += `<span class='totalpages'>Pág. ${currentPage} de ${maximum}</span>`;
 
     if (currentPage > 1) {
@@ -214,3 +214,4 @@ function addMaxResults(event) {
   var searchUrl = baseUrl + "?q=" + encodeURIComponent(query) + "&max-results=" + itemsPerPage;
   window.location.href = searchUrl;
 }
+
